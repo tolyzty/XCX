@@ -1,0 +1,92 @@
+<view class="top">
+   <view class="left-search">
+    <input type="text" placeholder="请输入商品分类、商品名称" name="sea" id="sea" />
+   </view>
+  
+</view>
+    <view class="mui-slider" style='height:182px;border-top: 1px solid #F5F5F5;'>
+        <swiper style="height:181px" 
+        indicator-dots="{{indicatorDots}}" 
+        vertical="{{vertical}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}" 
+        bindchange="swiperchange">
+
+            <block wx:for="{{images}}">
+                <swiper-item>
+                    <image src="{{item.picurl}}" class="slide-image"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+<view class="index-fenlei">
+  <ul>
+   <li>
+    <navigator url="" class="navs">
+      <image src="/image/ind-chaye.jpg" class="liimage" />
+    </navigator>
+   </li>
+   <li>
+    <navigator url="" class="navs">
+      <image src="/image/ind-fuzhuang.jpg" class="liimage" />
+    </navigator>
+   </li>
+   <li>
+    <navigator url="" class="navs">
+      <image src="/image/ind-peishi.jpg" class="liimage" />
+    </navigator>
+   </li>
+   <li>
+    <navigator url="" class="navs">
+      <image src="/image/ind-shenghuo.jpg" class="liimage" />
+    </navigator>
+   </li>
+ 
+  </ul>
+</view>
+<view class="index-type">
+  <view class="type-banner">
+   <navigator url="url">
+      <image src="/image/ind-xiao-banner1.jpg" style="width:100%;height:187px;"></image>
+   </navigator>
+  </view>
+
+<view class="more">
+    <navigator url="url" style="font-size:14px;color:#8f8f94;">查看更多>></navigator>
+</view>
+<view class="type-pro">
+  <dl>
+   <navigator url="url" style="border: 1px solid #e5e5e5;">
+      <dt>
+        <image src="/image/index-pro.jpg" style="width:155px;height:158px;"></image>
+      </dt>
+   </navigator>
+    <navigator url="url" style="text-align: center;">
+      <dd>
+       <p>美特斯邦威毛衣</p>
+       <p class="price">
+          <span>￥162.00</span>
+          <span>￥222.00</span>
+       </p>
+      </dd>
+   </navigator>
+  </dl>
+   <dl>
+   <navigator url="url" style="border: 1px solid #e5e5e5;">
+      <dt>
+        <image src="/image/index-pro.jpg" style="width:155px;height:158px;"></image>
+      </dt>
+   </navigator>
+    <navigator url="url" style="text-align: center;">
+      <dd>
+       <p>美特斯邦威毛衣</p>
+       <p class="price">
+          <span>￥162.00</span>
+          <span>￥222.00</span>
+       </p>
+      </dd>
+   </navigator>
+  </dl>
+</view>
+</view>

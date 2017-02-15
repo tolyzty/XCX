@@ -1,0 +1,27 @@
+
+<view>{{uuid}}</view>
+<view>{{spid}}</view>
+<view>{{ddid}}</view>
+<form bindsubmit="ddform">
+<view style="margin-top:10px;margin-bottom:10px;border:1px solid red;height:200rpx;">
+</view>
+<view style="border:1px solid #333333;margin-bottom:10px;">
+    <view>物品名字：{{sptitle}}</view>
+    <view style="margin-top:10px;margin-bottom:10px;">发票类型：
+        <picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
+         <text>{{array[index]}}</text>
+        </picker>
+    </view>
+    <view>物品数量：{{spnubmer}}</view>
+    <view><input type="text" placeholder="留言" bindinput="lyinput"/></view>
+    <view><navigator url="../fpxx/index">发票信息</navigator>{{mt}}/明细</view>
+</view>
+
+<view style="border:1px solid #4773ad;margin-top:10px;">
+    <view>物品金额：{{spamount}}</view>
+    <view>运费：0.0</view>
+    <view>共1件,合计:{{spamount*1}}</view>
+</view>
+   <button type="primary" formType="submit" style="margin-top:10px;" bindtap="getxx">确认支付</button>
+</form>
+<button bindtap="save">提交</button>

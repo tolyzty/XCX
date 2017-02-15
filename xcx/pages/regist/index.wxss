@@ -1,0 +1,40 @@
+.login-content {
+    width: 90%;
+    margin: 0 auto;
+}
+.login-content form {
+    width: 100%;
+}
+.login-content form .vi {
+    width: 100%;
+    overflow: hidden;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(191, 191, 191);
+    padding-left: 10%;
+    font-size: 16px;
+    color: #b1b1b1;
+    border-radius: 3px;
+    outline: 0;
+    background-color: #fff;
+    -webkit-appearance: none;
+    line-height: 21px;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+}
+.login-button {
+    width: 100%;
+    height: 7vh;
+    line-height: 7vh;
+    padding: 0;
+    background: #d46f24;
+    color: #fff;
+    border-radius: 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin: 5vh 0 2vh;
+}

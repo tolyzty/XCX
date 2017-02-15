@@ -1,0 +1,50 @@
+
+
+ <view style="height:60px;border:1px solid #ddd">
+   用户SessionID: {{code}}
+  </view>
+
+ <view wx:if="{{code==1}}">
+   <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    
+  </view>
+
+    <block wx:for="{{userItem}}">
+         <view style="margin-top:20px;">ID：{{item.id}}</view>
+        <view style="margin-top:20px;">用户名：{{item.username}}</view>
+        <view style="margin-top:20px;">手机号：{{item.phone}}</view>
+        <view style="margin-top:20px;">邮箱：{{item.email}}</view>
+        <view style="margin-top:20px;">头像：{{item.filename}}</view>
+        <view style="margin-top:20px;">时间：{{item.creatime}}</view>
+        <view style="margin-top:20px;">微信名：{{userInfo.nickName}}</view>
+    </block>
+    <view style="margin-top:20rpx;"><navigator url="../order/index?id={{uid}}">订单管理</navigator></view>
+    <view style="margin-top:20px;width:120px;">
+        <button type="warn" bindtap="logoutbtu" size="mini">退出登录</button>
+    </view>
+</view>
+<view wx:else>
+
+<view class="login-content" >
+ <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="vi">
+    <input name="username" placeholder="手机号" type="text"/>
+  </view>
+  <view class="vi">
+    <input name="password" type="password" placeholder="密码"/>
+  </view>
+
+
+    <view style="margin-top:140px;">
+      <button formType="submit">提交</button>
+      <button formType="reset">重置</button>
+    </view>
+  
+ </form>
+  
+  <modal  hidden="{{error}}" no-cancel bindtap="suberror">{{msgerror}}</modal>
+  <modal  hidden="{{loginsue}}" no-cancel bindtap="loginsud">{{loginmsg}}</modal>
+</view>
+  
+</view>

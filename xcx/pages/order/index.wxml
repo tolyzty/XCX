@@ -1,0 +1,48 @@
+
+ <view class="body">
+  <view class="nav bc_white">
+    <view class="{{selected?'red':'default'}}" bindtap="selected">全部</view>
+    <view class="{{selected1?'red':'default'}}" bindtap="selected1">待付款</view>
+     <view class="{{selected2?'red':'default'}}" bindtap="selected2">待发货</view>
+     <view class="{{selected3?'red':'default'}}" bindtap="selected3">待收货</view>
+  </view>
+  <view class="{{selected?'show':'hidden'}}">
+  
+  <view class="order">
+    <view class="orderli" wx:for="{{orderdata}}">
+          <view class="h2">
+            <i></i>
+            <view class="span">{{item.dd_bh}}</view>
+            <b wx:if="{{item.dd_zt==0}}">待支付</b>
+            <b style="color:#0e90d2;" wx:elif="{{item.dd_zt==1}}">待发货 </b>
+            <b style="color:#5eb95e;" wx:elif="{{item.dd_zt==2}}">待收货</b>
+          </view>
+             <p><view class="span">{{item.sp_title}}</view></p>
+          <view class="h3">
+            <view class="span">共{{item.dd_spnubmer}}件,合计:￥{{item.dd_spamount}}</view>
+           
+            <block wx:if="{{item.dd_zt==0}}">
+               <navigator url="url" class="aa current" >立即支付</navigator> 
+            <view class="aa" bindtap="removeOrder" data-id="{{item.dd_bh}}" >取消订单</view>
+            </block>
+             <block wx:if="{{item.dd_zt==1}}">
+              <navigator url="url" class="aa current"  style="background:#0e90d2">查看物流</navigator> 
+            <view url="url" class="aa" >售后服务</view>
+            </block>
+              <block wx:if="{{item.dd_zt==2}}">
+               <navigator url="url" class="aa current" style="background:#5eb95e" >确认收货</navigator> 
+              <navigator url="url" class="aa">退货/换货</navigator>
+            </block>          
+             
+          </view>
+    </view>
+
+  </view>
+  
+  </view>
+  <view class="{{selected1?'show':'hidden'}}">for 待付款</view>
+   <view class="{{selected2?'show':'hidden'}}">for 待发货</view>
+    <view class="{{selected3?'show':'hidden'}}">for 待收货</view>
+</view>
+
+<toast hidden="{{hiddenToast}}" duration="500" bindchange="Toastchange" >订单已取消</toast>

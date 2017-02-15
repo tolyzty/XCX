@@ -1,0 +1,20 @@
+
+<view>
+  <view style="height:60px;border:1px solid #ddd">
+   {{statusCode}}
+  </view>
+</view>
+<view style="width:100%;height:100%" wx:if="{{statusCode==200}}">
+        <block wx:for="{{venuesItems}}">
+        <view style="width:50%;margin-top:20px;float:left;">
+            <navigator url="../lb/index?id={{item.lb_id}}">
+                <view class="ico-fl" style="width:32px;height:32px;margin:auto;"></view>
+                <view style=" text-align: center;"><p class="icop">{{item.lb_name}}</p></view>
+            </navigator>
+        </view>
+        </block>
+</view>
+<view wx:else>对不起,网络链接错误</view>
+<loading hidden="{{loadingHidden}}">
+        加载中...
+</loading>

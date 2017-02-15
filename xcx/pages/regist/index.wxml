@@ -1,0 +1,36 @@
+ <view style="height:60px;border:1px solid #ddd;margin-bottom:20px;">
+   {{code}}
+  </view>
+<view>欢迎注册会员</view>
+
+<view style="margin-top:20px;" class="login-content ">
+    <form bindsubmit="formSubmit">
+       <view class="vi">
+    <input name="username" placeholder="用户名" type="text"/>
+  </view>
+  <view class="vi">
+    <input name="password" type="password" placeholder="密码"/>
+  </view>
+     <view class="vi">
+    <input name="phone" placeholder="手机号" type="text"/>
+  </view>
+
+  
+    <view style="margin-top:140px;">
+      <button formType="submit">提交</button>
+    </view>
+  
+ </form>
+</view>
+
+<modal class="modal" hidden="{{modalsud}}" no-cancel  bindtap="modallocat" >  
+{{resmessage}}
+</modal>  
+
+<modal class="modal" hidden="{{modalerr}}" no-cancel  bindtap="modalclear" >  
+{{errmessage}}
+</modal>  
+
+    <view style="margin-top:20px;margin-bottom:20px;">
+        <navigator url="../user/index">立即登录</navigator>
+    </view>

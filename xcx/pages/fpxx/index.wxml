@@ -1,0 +1,10 @@
+<view style="margin-top:20px">
+    <input type="text" bindblur="fpmt" placeholder="发票名头:公司名称/个人" value="{{mt}}" />
+</view>
+<view style="margin-top:20px">
+    <input type="text" bindblur="fpnr" placeholder="发票内容" value="{{nr}}"/>
+</view>
+
+<view style="margin-top:20px">
+    <button type="primary" bindtap="save">确认</button>
+</view>

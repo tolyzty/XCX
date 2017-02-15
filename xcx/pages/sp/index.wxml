@@ -1,0 +1,60 @@
+<view>
+  <swiper indicator-dots="{{indicatorDots}}"  style="height:620rpx;"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <swiper-item>
+        <image src="/image/tu43.jpg" class="slide-image" style="height:100%;" />
+      </swiper-item>
+  </swiper>
+</view>
+<view class="goods_infor_top">
+<block wx:for="{{list}}">
+<view class="goods_title">
+    {{item.sp_title}}
+    <view class="goods_collect_btn" bindtap="collect">
+      <view>
+        <image src="" class="goods_collect_img"></image>
+      </view> 
+      <text>已收藏</text>
+    </view>
+  </view>
+  <view class="goods_price">
+    <text>¥{{item.sp_price}}</text>
+    <text class="goods_old_price">¥{{item.sp_price}}</text>
+  </view>
+  <view class="goods_deliver">
+    {{item.sp_time}}
+  </view>
+   <view class="shopping_container">
+                    <view class="title">{{item.ks_id}}</view>
+                    <view class="reason">颜色：{{item.sp_color}}</view>
+                    <view class="reason">副标题:{{item.sp_excerpt}}</view>
+                    <view class="reason">编号：{{item.sp_number}}</view>
+                    <view class="reason">价格：{{item.sp_price}}</view>
+                    <view class="reason">标题：{{item.sp_title}}</view>
+                    <view class="reason">时间：{{item.sp_time}}</view>
+                    <view>---------------------------------</view>
+                    <view class="title">{{item.ks_id}}</view>
+                    <view class="reason">颜色：{{item.sp_color}}</view>
+                    <view class="reason">副标题:{{item.sp_excerpt}}</view>
+                    <view class="reason">编号：{{item.sp_number}}</view>
+                    <view class="reason">价格：{{item.sp_price}}</view>
+                    <view class="reason">标题：{{item.sp_title}}</view>
+                    <view class="reason">时间：{{item.sp_time}}</view>
+                    <view class="title">{{item.ks_id}}</view>
+                    <view>---------------------------------</view>
+                    <view class="reason">颜色：{{item.sp_color}}</view>
+                    <view class="reason">副标题:{{item.sp_excerpt}}</view>
+                    <view class="reason">编号：{{item.sp_number}}</view>
+                    <view class="reason">价格：{{item.sp_price}}</view>
+                    <view class="reason">标题：{{item.sp_title}}</view>
+                    <view class="reason">时间：{{item.sp_time}}</view>
+                </view>
+</block>
+</view>
+<view class="goods_bottom_btn">
+  <view>
+     <navigator url="../dingdan/index?id={{sp_id}}">
+            <view style="font-size:16px;color:#fff;line-height: 45px;">立即购买</view>
+        </navigator>
+  </view>
+</view>
